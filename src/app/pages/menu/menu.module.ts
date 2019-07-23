@@ -13,12 +13,28 @@ const routes: Routes = [
     component: MenuPage,
     children: [
       {
-        path: 'first',
-        loadChildren: '../first-with-tabs/first-with-tabs.module#FirstWithTabsPageModule'
+        path: 'infos',
+        loadChildren: '../infos/infos.module#InfosPageModule'
       },
       {
-        path: 'second',
-        loadChildren: '../second/second.module#SecondPageModule'
+        path: 'skills',
+        loadChildren: '../skills/skills.module#SkillsPageModule'
+      },
+      {
+        path: 'character',
+        loadChildren: '../character/character.module#CharacterPageModule'
+      },
+      {
+        path: 'projects',
+        loadChildren: '../projects/projects.module#ProjectsPageModule'
+      },
+      {
+        path: 'career',
+        loadChildren: '../career/career.module#CareerPageModule'
+      },
+      {
+        path: 'contacttabs',
+        loadChildren: '../contacttabs/contacttabs.module#ContacttabsPageModule'
       }
     ]
   }
@@ -33,4 +49,4 @@ const routes: Routes = [
   ],
   declarations: [MenuPage]
 })
-export class MenuPageModule { }
+export class MenuPageModule {}

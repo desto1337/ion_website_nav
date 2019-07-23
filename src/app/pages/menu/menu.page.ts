@@ -10,23 +10,41 @@ export class MenuPage implements OnInit {
 
   pages = [
     {
-      title: 'First page with Tabs',
-      url: '/menu/first'
+      title: 'Über uns',
+      url: '/menu/infos'
     },
     {
-      title: 'Second page blank',
-      url: '/menu/second'
+      title: 'Unsere Skills',
+      url: '/menu/skills'
+    },
+    {
+      title: 'Unser Team',
+      url: '/menu/character'
+    },
+    {
+      title: 'Unsere Projekte',
+      url: '/menu/projects'
+    },
+    {
+      title: 'Unser Werdegang',
+      url: '/menu/career'
+    },
+    {
+      title: 'Kontakt & Mehr',
+      url: '/menu/contacttabs'
     }
   ];
 
   selectedPath = '';
 
   constructor(private router: Router) {
+
     this.router.events.subscribe((event: RouterEvent) => {
       if(event && event.url) {
         this.selectedPath = event.url;
       }
     });
+
    }
 
   ngOnInit() {
